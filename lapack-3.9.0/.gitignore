@@ -4,8 +4,6 @@
 # test in INSTALL
 INSTALL/test*
 
-# local make.inc
-make.inc
 
 # BLAS testing
 BLAS/TESTING/*.out
