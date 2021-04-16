@@ -22,11 +22,14 @@ sudo cp ./*.a /usr/lib
 ```bash
 cd lapack-3.9.0 
 
-sudo make  -j7
+make  -j7
 # Then the build may failed: Makefile:463: recipe for target 'znep.out' failed
+# You may need try block below a few times until it success.
+# BEGIN
 ulimit -s 100000
 make clean 
-sudo make -j7
+make -j7
+#END
 
 sudo cp ./liblapack.a /usr/local/lib/
 ```
